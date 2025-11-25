@@ -5,7 +5,8 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import toast, { Toaster } from 'react-hot-toast';
 
 // --- НАЛАШТУВАННЯ ---
-const API_BASE = 'http://localhost:5001/api';
+// Якщо ми на локальному комп'ютері - юзаємо локалхост, якщо в інтернеті - адресу Render
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5001/api';
 
 // --- ДАНІ ПРО ТЕСТИ ---
 const AVAILABLE_TESTS = [
